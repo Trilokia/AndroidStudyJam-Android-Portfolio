@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
         android:id="@+id/imageView"
         android:layout_width="160dp"
         android:layout_height="160dp"
@@ -35,6 +36,9 @@
         android:text="Android Developer"
         android:textSize="24sp" />
 
+
+
+
     <LinearLayout
         android:padding="10dp"
         android:id="@+id/lyt_phone"
@@ -56,6 +60,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
+            android:onClick="openTel"
             android:text="+91:9469084068"
             android:textSize="20sp" />
     </LinearLayout>
@@ -74,15 +79,16 @@
             android:id="@+id/imageView5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_share"
-           />
+            app:srcCompat="@drawable/ic_share" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="/@Imtrilokia"
+            android:onClick="openSocial"
+            android:text="Imtrilokia.dev"
+
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -111,9 +117,11 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_weight="3"
+            android:onClick="openMail"
             android:text="hi@imtrilokia.dev"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="156dp" />
     </LinearLayout>
 
 </RelativeLayout>
